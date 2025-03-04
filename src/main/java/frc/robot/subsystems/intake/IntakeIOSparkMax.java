@@ -10,7 +10,7 @@ import com.revrobotics.RelativeEncoder;
 import com.revrobotics.spark.SparkBase.ResetMode;
 import frc.robot.Constants;
 
-
+//
 public class IntakeIOSparkMax implements IntakeIO {
     SparkMax algaeMotor1;
     SparkMax algaeMotor2;
