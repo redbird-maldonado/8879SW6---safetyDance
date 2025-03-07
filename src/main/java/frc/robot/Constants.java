@@ -21,7 +21,7 @@ public class Constants {
 
     public static final double PROCESSOR_HEIGHT = 0;
     public static final double SOURCE_HEIGHT = 4.35;
-    public static final double L0_HEIGHT = -.5;
+    public static final double L0_HEIGHT = -0.5;
     public static final double L1_HEIGHT = 7.75; // 5
     public static final double L2_HEIGHT = 16; // 10
     public static final double L3_HEIGHT = 23; //18
