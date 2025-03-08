@@ -34,7 +34,7 @@ public class RobotContainer {
 
 	/* Setting up bindings for necessary control of the swerve drive platform */
 	private final SwerveRequest.FieldCentric drive = new SwerveRequest.FieldCentric()
-			.withDeadband(MaxSpeed * 0.1).withRotationalDeadband(MaxAngularRate * 0.1) // Add a 10% deadband
+			.withDeadband(MaxSpeed * 0.05).withRotationalDeadband(MaxAngularRate * 0.05) // Add a 10% deadband
 			.withDriveRequestType(DriveRequestType.OpenLoopVoltage); // Use open-loop control for drive motors
 	private final SwerveRequest.SwerveDriveBrake brake = new SwerveRequest.SwerveDriveBrake();
 	private final SwerveRequest.PointWheelsAt point = new SwerveRequest.PointWheelsAt();
@@ -151,6 +151,16 @@ public class RobotContainer {
 		ParallelCommandGroup l3CommandGroup = new ParallelCommandGroup(liftToL3Command, wristToL3Command);
 		operatorController.y().onTrue(l3CommandGroup);
 
+
+		
+
+		// KILL RUMBLE
+		// operatorController.setRumble(null, MaxAngularRate);
+		
+		// MAP SLOW MODE TO A BUTTON ON DRIVER
+		
+		
+		
 		// algae L-1 state
 		Command algae_lift_1 = new RunCommand(() -> elevator.setPosition(Constants.L1_HEIGHT_ALGAE), elevator);
 		driverController.leftTrigger().onTrue(algae_lift_1);
